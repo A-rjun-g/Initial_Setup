@@ -9,7 +9,7 @@ Interactive bowling game with physics.
 **How to Play**
 
 Move the ball to the left or right to position it.
-Make use the projectcile arrow to aim the pins.
+Make use the projectile arrow to aim the pins.
 Drag the ball to adjust the speed with which the ball hit the pins.
 
 **Built With**
