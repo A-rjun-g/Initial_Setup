@@ -61,7 +61,7 @@ export const pointerUp = (
       );
       //update the score board GUI -- current and overall scores
       updateGameScores(game);
-      //if every player has rolled (5) all attempts, 
+      //if every player has rolled (5) all attempts,
       //stop the game -- controls, GUI and then reset the game
       if (
         game.currentFrameIndex === game.totalAttempts - 1 &&
@@ -97,8 +97,11 @@ export const pointerMove = (
   let aimAngle =
     (ballMovementObjects.bowling_ball.position.x + current.x) * 0.1;
 
-  if (aimAngle > 0.15) aimAngle = 0.15;
-  else if (aimAngle < -0.15) aimAngle = -0.15;
+  const minimumAngle = -0.15;
+  const maximumAngle = 0.15;
+  
+  if (aimAngle > maximumAngle) aimAngle = maximumAngle;
+  else if (aimAngle < minimumAngle) aimAngle = minimumAngle;
 
   aim.rotation.y = aimAngle;
 
